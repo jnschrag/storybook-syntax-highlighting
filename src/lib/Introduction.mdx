@@ -1,0 +1,38 @@
+# Testing syntax highlighting in an `.mdx` file
+
+Adding syntax highlighting for `svelte` and `scss` doesn't work in v7. Implemented following the instructions in the [6.5 docs](https://storybook.js.org/docs/react/writing-docs/mdx#syntax-highlighting).
+
+`js` (built-in)
+
+```js
+import { Component } from 'library';
+export let data;
+```
+
+`svelte` (added)
+
+```svelte
+<script>
+	import { Component } from 'library';
+
+	export let data;
+</script>
+
+<div style="background: #f00;">
+	<Component />
+</div>
+```
+
+`scss` (added)
+
+```scss
+@use 'file' as *;
+
+.selector {
+	color: #f00;
+
+	&.test {
+		color: #fff;
+	}
+}
+```
